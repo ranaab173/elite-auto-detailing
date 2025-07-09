@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Auto Detailing - Premium Car Care</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-orange {
+            background-color: #ff4500; /* Deep orange */
+        }
+        .text-orange-primary {
+            color: #ff4500;
+        }
+        .btn-primary {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary:hover {
+            background-color: #e03e00;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card {
+            background-color: #1a1a1a;
+            border-radius: 0.75rem; /* Slightly more rounded */
+        }
+        .service-card {
+            background-color: #1a1a1a;
+            border-radius: 0.75rem; /* Slightly more rounded */
+            overflow: hidden; /* Ensures image corners match card */
+        }
+        .service-card img {
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+        .footer-link:hover {
+            color: #ff4500;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-black py-4 px-6 md:px-12 flex justify-between items-center fixed w-full z-10 shadow-lg">
+        <div class="flex items-center">
+            <img src="https://cdn.pixabay.com/photo/2023/03/06/13/58/brand-7833518_1280.png" alt="Elite Auto Detailing Logo" class="h-10 w-10 rounded-full mr-3">
+            <span class="text-white text-2xl font-bold">ELITE AUTO DETAILING</span>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-white text-sm">
+            <a href="#" class="hover:text-orange-primary transition duration-300">HOME</a>
+            <a href="#" class="hover:text-orange-primary transition duration-300">ABOUT</a>
+            <a href="#" class="hover:text-orange-primary transition duration-300">SERVICES</a>
+            <a href="#" class="hover:text-orange-primary transition duration-300">GALLERY</a>
+            <a href="#" class="hover:text-orange-primary transition duration-300">CONTACT</a>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-95 z-20 hidden flex-col items-center justify-center space-y-8 text-white text-2xl">
+        <button class="absolute top-6 right-6 text-white text-4xl" id="close-mobile-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#" class="hover:text-orange-primary transition duration-300">HOME</a>
+        <a href="#" class="hover:text-orange-primary transition duration-300">ABOUT</a>
+        <a href="#" class="hover:text-orange-primary transition duration-300">SERVICES</a>
+        <a href="#" class="hover:text-orange-primary transition duration-300">GALLERY</a>
+        <a href="#" class="hover:text-orange-primary transition duration-300">CONTACT</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center text-center relative">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="z-10 p-6 md:p-12 rounded-lg">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Welcome to <br> <span class="text-orange-primary">Elite Auto Detailing</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Unleash your vehicle's true shine with our unparalleled detailing expertise.
+            </p>
+            <button class="btn-primary text-lg font-semibold rounded-full shadow-lg hover:shadow-xl">
+                Schedule Your Detail
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-black py-16 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 rounded-lg">
+                <i class="fas fa-handshake text-orange-primary text-5xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-white mb-2">Dedicated Craftsmanship</h3>
+                <p class="text-gray-400">Our passion for perfection ensures every detail is meticulously cared for.</p>
+            </div>
+            <div class="p-6 rounded-lg">
+                <i class="fas fa-brush text-orange-primary text-5xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-white mb-2">Premium Products</h3>
+                <p class="text-gray-400">We use only the finest, industry-leading products for superior results.</p>
+            </div>
+            <div class="p-6 rounded-lg">
+                <i class="fas fa-shield-alt text-orange-primary text-5xl mb-4"></i>
+                <h3 class="text-xl font-semibold text-white mb-2">Lasting Protection</h3>
+                <p class="text-gray-400">Beyond clean, we provide durable protection for your vehicle's longevity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Car Care Solutions Section -->
+    <section class="bg-black py-16 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 rounded-lg overflow-hidden shadow-xl">
+                <img src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=500&q=80" alt="Modern Detailing Studio" class="w-full h-auto object-cover rounded-lg">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold text-white mb-6">Your Trusted Partner in Car Care Excellence</h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    At Elite Auto Detailing, we don't just clean cars; we rejuvenate them. Our expert technicians combine years of experience with a meticulous approach, ensuring every curve and crevice of your vehicle receives the attention it deserves.
+                </p>
+                <p class="text-gray-400 text-base">
+                    From restoring faded paintwork to deep cleaning interiors, our commitment is to deliver a showroom finish that not only looks stunning but also protects your investment for the long haul.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Solutions for All Your Car Needs Section -->
+    <section class="bg-black py-16 px-6 md:px-12 text-center">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-12">Comprehensive Solutions for Every Vehicle.</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80" alt="Exterior Detailing" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Signature Exterior Detail</h3>
+                    <p class="text-gray-400 text-sm">Restore your car's paint to a brilliant, mirror-like finish with our multi-step process.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80" alt="Interior Detailing" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Luxury Interior Rejuvenation</h3>
+                    <p class="text-gray-400 text-sm">Experience a fresh, spotless cabin with deep cleaning and conditioning of all surfaces.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80" alt="Ceramic Coating" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Advanced Ceramic Coating</h3>
+                    <p class="text-gray-400 text-sm">Provide unparalleled, long-lasting protection and incredible gloss for your vehicle's paint.</p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&h=200&q=80" alt="Engine Bay Cleaning" class="w-full h-48 object-cover mb-4">
+                    <h3 class="text-xl font-semibold text-white mb-2">Precision Engine Bay Detail</h3>
+                    <p class="text-gray-400 text-sm">Safely clean and dress your engine compartment, enhancing its appearance and longevity.</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <button class="btn-primary text-lg font-semibold rounded-full shadow-lg hover:shadow-xl">
+                    Explore All Services
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-black py-16 px-6 md:px-12 text-center text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12">Why Elite Auto Detailing Stands Out?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <p class="text-5xl font-bold mb-2">7.5K+</p>
+                    <p class="text-lg">Vehicles Transformed</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-bold mb-2">20+</p>
+                    <p class="text-lg">Years of Combined Experience</p>
+                </div>
+                <div>
+                    <p class="text-5xl font-bold mb-2">97%</p>
+                    <p class="text-lg">Repeat Clients</p>
+                </div>
+            </div>
+            <button class="btn-primary text-lg font-semibold rounded-full shadow-lg hover:shadow-xl">
+                Get Your Free Consultation
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-black py-16 px-6 md:px-12 text-center">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-white mb-12">Hear From Our Satisfied Clients.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card p-8 rounded-lg shadow-lg text-left">
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        "My car looks better than the day I bought it! The team at Elite Auto Detailing went above and beyond. The paint correction and interior clean were phenomenal. Truly masters of their craft!"
+                    </p>
+                    <p class="font-semibold text-white">Michael T.</p>
+                    <p class="text-gray-500 text-sm">Paint Correction & Interior Detail</p>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card p-8 rounded-lg shadow-lg text-left">
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        "I'm incredibly impressed with the ceramic coating service. My car now has an amazing depth of shine, and water just beads right off. The investment was absolutely worth it for the protection and look."
+                    </p>
+                    <p class="font-semibold text-white">Jessica L.</p>
+                    <p class="text-gray-500 text-sm">Premium Ceramic Coating</p>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card p-8 rounded-lg shadow-lg text-left">
+                    <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                        "The best detailing experience I've ever had! My SUV's interior was a disaster, but they made it look brand new. The attention to detail and friendly service make Elite Auto Detailing my go-to."
+                    </p>
+                    <p class="font-semibold text-white">David P.</p>
+                    <p class="text-gray-500 text-sm">Full Interior Restoration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section-orange py-16 px-6 md:px-12 text-center text-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-6">Ready for a Showroom Finish?</h2>
+            <p class="text-xl mb-8">
+                Don't just drive, make an impression. Let Elite Auto Detailing elevate your vehicle's appearance.
+            </p>
+            <button class="btn-primary text-lg font-semibold rounded-full shadow-lg hover:shadow-xl">
+                Book Your Transformation
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black py-16 px-6 md:px-12 text-gray-400 text-sm">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- About Us -->
+            <div>
+                <div class="flex items-center mb-4">
+                    <img src="https://cdn.pixabay.com/photo/2023/03/06/13/58/brand-7833518_1280.png" alt="Elite Auto Detailing Logo" class="h-8 w-8 rounded-full mr-2">
+                    <span class="text-white text-xl font-bold">ELITE AUTO DETAILING</span>
+                </div>
+                <p class="mb-4">
+                    Your premier destination for luxury car detailing, committed to perfection and client satisfaction.
+                </p>
+                <div class="flex space-x-4 text-white text-xl">
+                    <a href="#" class="hover:text-orange-primary transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-orange-primary transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-orange-primary transition duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-orange-primary transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link block">Home</a></li>
+                    <li><a href="#" class="footer-link block">About Us</a></li>
+                    <li><a href="#" class="footer-link block">Services</a></li>
+                    <li><a href="#" class="footer-link block">Gallery</a></li>
+                    <li><a href="#" class="footer-link block">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Services -->
+            <div>
+                <h4 class="text-white text-lg font-semibold mb-4">Our Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="footer-link block">Exterior Detail</a></li>
+                    <li><a href="#" class="footer-link block">Interior Detail</a></li>
+                    <li><a href="#" class="footer-link block">Ceramic Coatings</a></li>
+                    <li><a href="#" class="footer-link block">Paint Correction</a></li>
+                    <li><a href="#" class="footer-link block">Headlight Restoration</a></li>
+                </ul>
+            </div>
+
+            <!-- Get In Touch -->
+            <div>
+                <h4 class="text-white text-lg font-semibold mb-4">Get In Touch</h4>
+                <p class="mb-2"><i class="fas fa-map-marker-alt text-orange-primary mr-2"></i> 456 Shine Blvd, Metropolis, CA 90210</p>
+                <p class="mb-2"><i class="fas fa-phone-alt text-orange-primary mr-2"></i> +1 (800) 789-0123</p>
+                <p class="mb-2"><i class="fas fa-envelope text-orange-primary mr-2"></i> info@eliteautodetailing.com</p>
+                <p class="mb-2"><i class="fas fa-clock text-orange-primary mr-2"></i> Mon - Sat: 8 AM - 7 PM</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+            &copy; <span id="current-year"></span> Elite Auto Detailing. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Get the current year for the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('hidden');
+            mobileMenuOverlay.classList.add('flex');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenuOverlay.classList.add('hidden');
+            mobileMenuOverlay.classList.remove('flex');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('hidden');
+                mobileMenuOverlay.classList.remove('flex');
+            });
+        });
+    </script>
+</body>
+</html>
